@@ -1,0 +1,2343 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+::selection {
+  color: #fff;
+  background-color: rgba(0, 154, 68, 1);
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.header {
+  height: 100px;
+  background: rgb(51, 39, 131);
+  background: linear-gradient(
+    90deg,
+    rgba(51, 39, 131, 1) 14%,
+    rgba(11, 129, 82, 1) 59%,
+    rgba(0, 154, 68, 1) 91%
+  );
+}
+.header {
+  position: fixed !important;
+  width: 100% !important;
+  z-index: 100 !important;
+}
+.header .wrapper {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .wrapper .hamburger {
+  display: none;
+}
+.header .wrapper .bar {
+  display: none;
+}
+.socials i {
+  color: rgb(51, 39, 131);
+  font-size: 25px;
+  background-color: #fff;
+  padding: 5px 6px;
+  border-radius: 5px;
+  margin-right: 15px;
+  transition: 0.5s;
+}
+.socials i:nth-child(1) {
+  padding: 5px 9px !important;
+}
+.socials i:hover {
+  background: rgb(51, 39, 131);
+  background: linear-gradient(
+    90deg,
+    rgba(51, 39, 131, 1) 23%,
+    rgba(11, 129, 82, 1) 82%,
+    rgba(0, 154, 68, 1) 100%
+  );
+  color: #fff;
+}
+.logo img {
+  transform: scale(0.7);
+}
+
+.headerContactsLeft i {
+  margin-right: 7px;
+}
+.headerContactsLeft a {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.headerContactsLeft .insta {
+  margin-bottom: 10px;
+}
+.headerContactsLeft .insta a {
+  display: flex;
+  align-items: center;
+}
+.headerContactsLeft .mail a {
+  display: flex;
+  align-items: center;
+}
+
+.headerContactsRight i {
+  margin-right: 7px;
+}
+.headerContactsRight a {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.headerContactsRight .phone {
+  margin-bottom: 10px;
+}
+.headerContactsRight .phone a {
+  display: flex;
+  align-items: center;
+}
+.headerContactsRight .web a {
+  display: flex;
+  align-items: center;
+}
+
+#logoMobile {
+  display: none;
+}
+#logoMobileLS {
+  display: none;
+}
+
+.mobile-nav {
+  opacity: 0;
+  visibility: hidden;
+}
+.hamburger {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contact {
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+}
+.contact p:nth-child(2) {
+  margin-top: 10px;
+}
+
+/* Home Page */
+
+#cubsForMobile1 {
+  display: none;
+}
+#cubsForMobile2 {
+  display: none;
+}
+
+.homePage {
+  background: url("./img/home-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+.homePage .phoneNum {
+  display: none;
+}
+.homePage .phoneNum a {
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(51, 39, 131, 1) 14%,
+    rgba(11, 129, 82, 1) 59%,
+    rgba(0, 154, 68, 1) 91%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.homePage::after {
+  content: url("./img/home-pg-cubs.png");
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  transform: scale(0.9);
+}
+.homePage p {
+  position: absolute;
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(51, 39, 131, 1) 14%,
+    rgba(11, 129, 82, 1) 59%,
+    rgba(0, 154, 68, 1) 91%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.navigations {
+  position: fixed;
+  top: 50%;
+  right: 130px;
+  width: 35px;
+  height: 130px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+.navigations a {
+  font-size: 17px;
+  color: #fff;
+}
+.navigations li {
+  font-size: 12px;
+  transition: all 0.3s;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.navigations li:hover,
+.navigations li.selected {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.navigations li {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.navigations li p {
+  font-size: 12px !important;
+}
+.selected {
+  transform: scale(1.2) !important;
+  opacity: 1 !important;
+  color: #fff !important;
+}
+.navigations a {
+  position: relative;
+}
+.navigations li p {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 30px;
+}
+
+/* About Page */
+
+.aboutPage {
+  /* height: 100vh; */
+  background: url("./img/about-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+#aboutCubic {
+  position: absolute;
+  top: -80px;
+  right: 250px;
+  transform: scale(0.8);
+}
+
+.aboutPage h1 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+}
+.aboutPage h1:nth-child(2) {
+  margin-bottom: 60px;
+}
+.aboutPage p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: justify;
+  /* text-indent: 30px; */
+}
+
+.aboutPage2 {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.child1 {
+  position: relative;
+  cursor: pointer;
+  width: 15%;
+}
+.child1 img {
+  width: 100%;
+}
+#child1 {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  transition: 0.4s;
+}
+.child1:hover #child1 {
+  top: 0px;
+  left: 0px;
+}
+
+.child2 {
+  position: relative;
+  cursor: pointer;
+}
+#child2 {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  transition: 0.4s;
+}
+.child2:hover #child2 {
+  top: 0px;
+  left: 0px;
+}
+
+.child3 {
+  position: relative;
+  cursor: pointer;
+}
+#child3 {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  transition: 0.4s;
+}
+.child3:hover #child3 {
+  top: 0px;
+  left: 0px;
+}
+
+.aboutPage {
+  position: relative;
+}
+#aboutBottom {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+}
+
+#aboutBottomMobile {
+  display: none;
+}
+
+/* Program Page */
+
+.programPage {
+  background: url("./img/program-bg.png");
+  position: relative;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+#prCubic {
+  position: absolute;
+  top: -50px;
+  left: 600px;
+}
+.programTop {
+  display: flex;
+  justify-content: space-between;
+}
+.prTopLeft {
+  width: 45%;
+}
+.prDays {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.left1 {
+  display: flex;
+}
+.left1 i {
+  margin-right: 10px;
+}
+
+.left2 {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.left2 i {
+  margin-right: 10px;
+}
+
+.left3 {
+  display: flex;
+  align-items: center;
+}
+.left3 i {
+  margin-right: 10px;
+}
+
+.prTopRight {
+  width: 45%;
+}
+
+.programPage h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.programPage span {
+  font-size: 20px;
+  border: 3px solid;
+  border-color: rgba(0, 154, 68, 1);
+  padding: 7px 15px;
+  border-radius: 20px;
+
+  background: rgb(57, 24, 139);
+  background: linear-gradient(
+    90deg,
+    rgba(57, 24, 139, 1) 4%,
+    rgba(58, 22, 140, 1) 21%,
+    rgba(14, 122, 85, 1) 86%
+  );
+}
+
+.programTop.programBottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+#prMiniCubic {
+  position: absolute;
+  left: 75%;
+  top: 50%;
+}
+
+/* Mission Page Design */
+
+/* Hide some box for Responsive(Mobile) */
+
+.box3Mobile,
+.box4Mobile,
+.box5Mobile,
+.box6Mobile,
+.box7Mobile,
+.box8Mobile {
+  display: none;
+}
+
+.missionPage {
+  background: url("./img/mission-bg.png");
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 25%;
+  height: 478.73px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 39px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box img {
+  width: 100%;
+  object-fit: cover;
+}
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box5Bottom {
+  width: 100%;
+  text-align: end;
+}
+
+.box7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2,
+.box5,
+.box7 {
+  padding: 7% 2%;
+}
+
+/* Footer */
+
+.footer {
+  height: 70px;
+  text-align: center;
+  background: url("./img/footer-bg.png");
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ScrollBar design */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(14, 122, 85);
+  background: linear-gradient(
+    0deg,
+    rgba(14, 122, 85, 1) 0%,
+    rgba(94, 73, 168, 1) 85%,
+    rgba(33, 62, 157, 0.9612219887955182) 98%
+  );
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgb(167, 167, 167);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 154, 68, 1);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    width: 78%;
+  }
+
+  /* homePage(1440) */
+
+  .homePage::after {
+    top: -110px;
+    left: -80px;
+    transform: scale(0.7);
+  }
+  .homePage p {
+    font-size: 47px;
+    bottom: 30px;
+  }
+
+  .navigations {
+    right: 105px;
+    width: 33px;
+    height: 135px;
+    border: 1px solid #fff;
+  }
+
+  /*  About Page(1440) */
+
+  .child1 {
+    width: 22%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 22%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 22%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  #aboutCubic {
+    position: absolute;
+    top: -100px;
+    right: 120px;
+    transform: scale(0.6);
+  }
+
+  .aboutPage h1:nth-child(2) {
+    margin-bottom: 50px;
+  }
+
+  #aboutBottom {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  /* Program Page(1440) */
+
+  .programPage {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+  #prCubic {
+    position: absolute;
+    top: -50px;
+    left: 450px;
+    transform: scale(0.9);
+  }
+
+  .prTopLeft {
+    width: 47%;
+  }
+  .prDays {
+    font-size: 19px;
+  }
+
+  .prTopRight {
+    width: 47%;
+  }
+
+  .programPage h1 {
+    font-size: 32px;
+    margin-bottom: 37px;
+  }
+
+  /* Mission Page(1440) */
+
+  .box {
+    width: 25%;
+    height: 362.25px;
+    font-size: 29px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .box2,
+  .box5,
+  .box7 {
+    padding: 6% 2%;
+  }
+}
+
+/* Responsive 1370px */
+
+@media screen and (max-width: 1370px) {
+  .wrapper {
+    width: 77%;
+  }
+
+  /* homePage(1370) */
+
+  .homePage::after {
+    top: -110px;
+    left: -80px;
+    transform: scale(0.7);
+  }
+  .homePage p {
+    font-size: 45px;
+  }
+
+  .navigations {
+    right: 105px;
+    width: 31px;
+    height: 125px;
+  }
+
+  /* About Page(1370) */
+
+  .child1 {
+    width: 22%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 22%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 22%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+  /* Mission Page(1370) */
+
+  .box {
+    width: 25%;
+    height: 344.64px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1267px) {
+  .wrapper {
+    width: 77%;
+  }
+
+  /* homePage(1267) */
+
+  .homePage::after {
+    top: -110px;
+    left: -125px;
+    transform: scale(0.7);
+  }
+
+  .navigations {
+    right: 100px;
+    width: 25px;
+    height: 100px;
+    border: 1px solid #fff;
+  }
+  .navigations a {
+    font-size: 14px !important;
+    color: #fff;
+  }
+  .navigations li {
+    transition: all 0.3s;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  .navigations li:hover,
+  .navigations li.selected {
+    transform: scale(1.05);
+  }
+  .navigations li {
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .navigations li p {
+    font-size: 12px !important;
+  }
+  .selected {
+    transform: scale(1.2) !important;
+    opacity: 1 !important;
+    color: #fff !important;
+  }
+  .navigations a {
+    position: relative;
+  }
+  .navigations li p {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 25px;
+  }
+
+  /* About Page(1267)*/
+
+  .child1 {
+    width: 22%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 22%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 22%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  /* Mission Page(1267) */
+
+  .box {
+    width: 25%;
+    height: 318.73px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  /* Header(1180) */
+
+  .header {
+    height: 90px;
+  }
+
+  .socials i {
+    color: rgb(51, 39, 131);
+    font-size: 21px;
+    background-color: #fff;
+    padding: 4px 5px;
+    margin-right: 12px;
+  }
+  .socials i:nth-child(1) {
+    padding: 5px 10px !important;
+  }
+
+  .logo img {
+    transform: scale(0.6);
+  }
+  .contact {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+  }
+  .contact p:nth-child(2) {
+    margin-top: 8px;
+  }
+
+  /* homePage(1180) */
+
+  .homePage {
+    height: calc(100vh - 90px);
+    position: relative;
+  }
+
+  .homePage::after {
+    top: -110px;
+    left: -150px;
+    transform: scale(0.6);
+  }
+  .homePage p {
+    font-size: 45px;
+  }
+
+  .navigations {
+    right: 95px;
+    width: 24px;
+    height: 100px;
+    border: 1px solid #fff;
+  }
+
+  .navigations li:hover,
+  .navigations li.selected {
+    transform: scale(1.03);
+  }
+  .navigations li {
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .navigations li p {
+    font-size: 10px !important;
+  }
+  .selected {
+    transform: scale(1.2) !important;
+    opacity: 1 !important;
+    color: #fff !important;
+  }
+  .navigations a {
+    position: relative;
+  }
+  .navigations li p {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 23px;
+  }
+
+  /*  About Page(1180) */
+
+  #prCubic {
+    position: absolute;
+    top: -50px;
+    left: 320px;
+    transform: scale(0.8);
+  }
+
+  .aboutPage {
+    background-position: center;
+    position: relative;
+    padding-top: 50px !important;
+    padding-bottom: 160px !important;
+  }
+
+  .aboutPage h1 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+  }
+  .aboutPage h1:nth-child(2) {
+    margin-bottom: 35px;
+  }
+  .aboutPage p {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .aboutPage2 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .aboutPage2 img {
+    transform: scale(0.8);
+  }
+  .aboutPage2 h1 {
+    font-size: 32px;
+  }
+
+  .child1 {
+    width: 25%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 25%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 25%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  #aboutCubic {
+    position: absolute;
+    top: -100px;
+    right: 120px;
+    transform: scale(0.6);
+  }
+
+  .aboutPage h1:nth-child(2) {
+    margin-bottom: 50px;
+  }
+
+  #aboutBottom {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  /* Program Page(1180) */
+
+  .programPage {
+    background: url("./img/program-bg.png");
+    position: relative;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .programPage {
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
+
+  .prTopLeft {
+    width: 47%;
+  }
+  .prDays {
+    font-size: 19px;
+  }
+
+  .prTopRight {
+    width: 47%;
+  }
+
+  .programPage h1 {
+    font-size: 28px;
+  }
+
+  .programPage span {
+    font-size: 18px;
+  }
+  .programPage p {
+    font-size: 17px;
+  }
+  #prMiniCubic {
+    position: absolute;
+    left: 75%;
+    top: 45%;
+  }
+
+  /* Mission Page(1180) */
+
+  .box {
+    width: 25%;
+    height: 296.84px;
+    font-size: 24px;
+  }
+
+  /* Footer(1050) */
+
+  .footer {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* Home(1050) */
+
+  .homePage::after {
+    top: -125px;
+    left: -210px;
+    transform: scale(0.55);
+  }
+
+  /* About(1050) */
+
+  #aboutBottom {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%) scale(0.55);
+  }
+
+  .child1 {
+    width: 28%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 28%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 28%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  /* Mission Page(1050) */
+
+  .box {
+    width: 25%;
+    height: 264.14px;
+    font-size: 24px;
+  }
+
+  .missionPage p {
+    font-size: 22px;
+  }
+
+  /* Footer(1050) */
+
+  .footer {
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Header(1024) */
+
+  .headerContactsLeft i {
+    margin-right: 7px;
+  }
+  .headerContactsLeft a {
+    font-size: 16px;
+  }
+  .headerContactsLeft .insta {
+    margin-bottom: 7px;
+  }
+
+  .headerContactsRight i {
+    margin-right: 7px;
+  }
+  .headerContactsRight a {
+    font-size: 16px;
+  }
+  .headerContactsRight .phone {
+    margin-bottom: 7px;
+  }
+
+  /* Home(1024) */
+
+  .navigations {
+    right: 30px;
+    width: 26px;
+    height: 110px;
+    border: 1px solid #fff;
+  }
+
+  .navigations p {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .navigations li {
+    transition: all 0.3s;
+    opacity: 0.3;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  /* About(1024) */
+
+  .aboutPage {
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    padding-top: 50px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .aboutPage h1 {
+    font-size: 35px;
+  }
+
+  .aboutPage h1:nth-child(2) {
+    margin-bottom: 30px !important;
+  }
+  .aboutPage p {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .aboutPage2 {
+    margin-top: 10px !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .aboutPage2 h1 {
+    font-size: 37px;
+  }
+
+  .aboutPage2 .text {
+    width: 40%;
+    text-align: center;
+  }
+
+  #child1,
+  #child2,
+  #child3 {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    transition: 0.4s;
+  }
+
+  .child1,
+  .child2,
+  .child3 {
+    width: 40%;
+  }
+
+  .child2,
+  .child3 {
+    margin-top: 30px;
+  }
+
+  .child1 {
+    width: 40%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 40%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 40%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  #aboutCubic {
+    position: absolute;
+    top: -110px;
+    right: 40px;
+    transform: scale(0.42);
+  }
+
+  .aboutPage h1:nth-child(2) {
+    margin-bottom: 50px;
+  }
+
+  #aboutBottom {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%) scale(0.5);
+  }
+
+  #prCubic {
+    position: absolute;
+    top: -50px;
+    left: 200px;
+    transform: scale(0.58);
+  }
+
+  /* Program(1024) */
+
+  .prDays {
+    font-size: 18px;
+  }
+
+  .programPage h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .programPage span {
+    font-size: 17px;
+  }
+  .programPage p {
+    font-size: 17px;
+  }
+  #prMiniCubic {
+    transform: scale(0.9);
+  }
+
+  /* Mission Page(1024) */
+
+  .box {
+    width: 25%;
+    height: 257.61px;
+  }
+
+  .missionPage p {
+    font-size: 21px;
+  }
+
+  /* Footer(1024) */
+
+  .footer {
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .homePage::after {
+    top: -109px;
+    left: -210px;
+    transform: scale(0.55);
+  }
+
+  /* About(990) */
+
+  #aboutCubic {
+    position: absolute;
+    top: -100px;
+    right: 40px;
+    transform: scale(0.35);
+  }
+
+  .child1 {
+    width: 40%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 40%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 40%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  /* Mission(990) */
+
+  .box {
+    width: 25%;
+    height: 226.41px;
+  }
+
+  .missionPage p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .homePage .phoneNum {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+  }
+  .homePage .phoneNum a {
+    font-size: 20px;
+  }
+
+  /* Header(1024) */
+
+  .headerContactsLeft,
+  .headerContactsRight {
+    display: none;
+  }
+
+  .header .wrapper .hamburger {
+    display: block;
+  }
+  .header .wrapper .bar {
+    display: block;
+  }
+  .mobile-nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hamburger {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  #cubsForMobile1 {
+    position: absolute;
+    top: 85px;
+    right: 250px;
+    z-index: 95;
+    display: block;
+    transform: scale(0.8);
+  }
+  #cubsForMobile2 {
+    position: absolute;
+    top: 210px;
+    left: 50px;
+    z-index: 95;
+    display: block;
+    transform: scale(1.05);
+  }
+
+  .header .socials {
+    display: none;
+  }
+
+  .header .contact {
+    display: none;
+  }
+
+  .mobile-nav .socials i {
+    color: rgb(51, 39, 131);
+    font-size: 21px;
+    background-color: #fff;
+    padding: 8px 10px !important;
+    margin-right: 12px;
+  }
+  #fb i {
+    padding: 8px 12px !important;
+  }
+
+  .header .wrapper {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 0 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #logoMobile {
+    display: block;
+    transform: scale(1);
+  }
+
+  .homePage::after {
+    display: none;
+  }
+
+  .homePage p {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 827px) {
+  #cubsForMobile2 {
+    top: 150px;
+    left: 50px;
+    z-index: 95;
+    display: block;
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+  .header .wrapper .hamburger {
+    display: block;
+  }
+  .header .wrapper .bar {
+    display: block;
+  }
+  .mobile-nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hamburger {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  #cubsForMobile1 {
+    position: absolute;
+    top: 85px;
+    right: 250px;
+    z-index: 95;
+    display: block;
+    transform: scale(0.8);
+  }
+  #cubsForMobile2 {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    z-index: 95;
+    display: block;
+    transform: scale(1.05);
+  }
+
+  .header .socials {
+    display: none;
+  }
+
+  .header .contact {
+    display: none;
+  }
+
+  .mobile-nav .socials i {
+    color: rgb(51, 39, 131);
+    font-size: 21px;
+    background-color: #fff;
+    padding: 8px 10px !important;
+    margin-right: 12px;
+  }
+  #fb i {
+    padding: 8px 12px !important;
+  }
+
+  .header .wrapper {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 0 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #logoMobile {
+    display: block;
+    transform: scale(1);
+  }
+
+  .homePage::after {
+    display: none;
+  }
+
+  .homePage p {
+    font-size: 40px;
+  }
+
+  /* About(768) */
+
+  .aboutPage {
+    text-align: center;
+  }
+
+  #aboutBottom {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%) scale(0.4);
+  }
+
+  /* Program(768) */
+
+  .programPage .wrapper {
+    width: 90%;
+  }
+
+  .programTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .prTopLeft {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .prHeader {
+    text-align: center;
+  }
+  .prTopRight {
+    width: 85% !important;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .prDays {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 19px;
+  }
+
+  .left1 {
+    display: flex;
+  }
+  .left1 i {
+    margin-right: 10px;
+  }
+
+  .left2 {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .left2 i {
+    margin-right: 10px;
+  }
+
+  .left3 {
+    display: flex;
+    align-items: center;
+  }
+  .left3 i {
+    margin-right: 10px;
+  }
+
+  #prMiniCubic {
+    position: absolute;
+    left: 75%;
+    top: 47%;
+    transform: scale(0.9);
+  }
+
+  /* Mission(768) */
+
+  .box {
+    width: 25%;
+    height: 193.2px;
+  }
+
+  .missionPage p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  /* Mission(708) */
+
+  .navigations {
+    display: none !important;
+  }
+
+  .box {
+    width: 25%;
+    height: 178.11px;
+  }
+
+  .missionPage p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .homePage p {
+    font-size: 38px;
+  }
+
+  /* About(688) */
+
+  .aboutPage2 h1 {
+    font-size: 34px;
+  }
+  .aboutPage2 {
+    margin-top: 10px !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+  }
+  .aboutPage2 img {
+    transform: scale(0.75);
+  }
+  .aboutPage2 .child2,
+  .child3 {
+    margin: 0;
+  }
+
+  .child1 {
+    width: 47%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 47%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 47%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+
+  /* Program(688) */
+
+  .prTopLeft {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .prTopRight {
+    width: 95% !important;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  /*  Mission(688) */
+
+  .box7 {
+    padding: 2% 2%;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .hamburger {
+    width: 35px !important;
+  }
+
+  .hamburger.hamburger.is-active {
+    width: 40px !important;
+  }
+
+  #logoMobile {
+    display: none;
+  }
+  #logoMobileLS {
+    display: block;
+    transform: scale(1);
+  }
+  .homePage p {
+    font-size: 35px;
+  }
+
+  /* Home(618) */
+
+  .navigations li:hover,
+  .navigations li.selected {
+    transform: scale(1.3);
+  }
+
+  .selected {
+    transform: scale(1.35) !important;
+    opacity: 1 !important;
+    color: #fff !important;
+  }
+
+  .navigations {
+    right: 10px;
+    width: 25px;
+    height: 110px;
+    border: 1px solid #fff;
+  }
+
+  .navigations li {
+    transition: all 0.3s;
+    opacity: 0.3;
+    cursor: pointer;
+    transform: scale(1);
+  }
+
+  #cubsForMobile1 {
+    top: 85px;
+    right: 250px;
+    transform: scale(0.7);
+  }
+  #cubsForMobile2 {
+    top: 190px;
+    left: 10px;
+    transform: scale(0.9);
+  }
+
+  /* About(618) */
+
+  .aboutPage .wrapper {
+    width: 85%;
+  }
+
+  #aboutBottom {
+    bottom: 10px;
+    transform: translateX(-50%) scale(0.35);
+  }
+
+  #aboutCubic {
+    top: -108px;
+    right: 40px;
+    transform: scale(0.25);
+  }
+
+  /* Program(618) */
+
+  .programPage .wrapper {
+    width: 85%;
+  }
+
+  #prCubic {
+    top: -60px;
+    left: 200px;
+    transform: scale(0.45);
+  }
+
+  #prMiniCubic {
+    left: 75%;
+    top: 47%;
+    transform: scale(0.7);
+  }
+
+  .prTopLeft {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .prTopRight {
+    width: 100% !important;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  /* Mission(618) */
+
+  .box {
+    width: 25%;
+    height: 155.47px;
+  }
+
+  .missionPage .box p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  #aboutBottom {
+    display: none;
+  }
+  #aboutBottomMobile {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  .aboutPage h1 {
+    font-size: 27px;
+  }
+  .aboutPage h1:nth-child(2) {
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+  }
+  .aboutPage p {
+    font-size: 15px;
+  }
+
+  .aboutPage2 h1 {
+    font-size: 31px;
+  }
+  .aboutPage2 {
+    margin-top: 35px !important;
+    justify-content: space-between !important;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .aboutPage2 img {
+    transform: scale(0.75);
+  }
+  .aboutPage2 .child2,
+  .child3 {
+    margin: 0;
+  }
+
+  .aboutPage2 .text {
+    width: 100%;
+  }
+
+  .child1 {
+    width: 95%;
+  }
+  .child1 img {
+    width: 100%;
+  }
+  .child2 {
+    width: 95%;
+  }
+  .child2 img {
+    width: 100%;
+  }
+  .child3 {
+    width: 95%;
+  }
+  .child3 img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 588px) {
+  /* Mission(588) */
+
+  .box3,
+  .box4,
+  .box5,
+  .box6,
+  .box7,
+  .box8 {
+    display: none;
+  }
+  .box img {
+    width: 100%;
+  }
+
+  .box3Mobile,
+  .box4Mobile,
+  .box5Mobile,
+  .box6Mobile,
+  .box7Mobile,
+  .box8Mobile {
+    display: block;
+  }
+
+  .box3Mobile,
+  .box6Mobile,
+  .box7Mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7% 2%;
+  }
+
+  .box6Mobile {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 50%;
+    height: 295.84px;
+  }
+
+  .missionPage .box p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .box {
+    width: 50%;
+    height: 276.72px;
+  }
+}
+
+@media screen and (max-width: 543px){
+  .homePage .phoneNum {
+    display: block;
+    position: absolute;
+    top: 13% !important;
+    left: 3%;
+  }
+  .homePage .phoneNum a {
+    font-size: 18px !important;
+  }
+
+  #cubsForMobile1{
+    top: 100px !important;
+    right: 80px !important;
+    transform: scale(0.7);
+  }
+
+}
+
+
+@media screen and (max-width: 510px) {
+  .box {
+    width: 50%;
+    height: 256.59px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box {
+    width: 50%;
+    height: 241.5px;
+  }
+}
+
+@media screen and (max-width: 492px) {
+  #aboutBottomMobile {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) scale(0.7);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mobile-nav .contacts i {
+    margin-right: 5px !important;
+  }
+
+  /* Home Page(425)*/
+
+  .homePage p {
+    font-size: 30px;
+  }
+
+  #cubsForMobile1 {
+    top: 85px;
+    right: 120px;
+    transform: scale(0.65);
+  }
+
+  #cubsForMobile2 {
+    display: none;
+  }
+
+  /* Program(425) */
+
+  .prTopLeft {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .prTopRight {
+    width: 100% !important;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .prDays {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  .prDays .daysLeft {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 154, 68, 1);
+  }
+
+  .prDays .daysRight {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    border-color: rgba(0, 154, 68, 1);
+  }
+
+  .left2 {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  /* Mission(425) */
+
+  .box3,
+  .box4,
+  .box5,
+  .box6,
+  .box7,
+  .box8 {
+    display: none;
+  }
+  .box img {
+    width: 100%;
+  }
+
+  .box3Mobile,
+  .box4Mobile,
+  .box5Mobile,
+  .box6Mobile,
+  .box7Mobile,
+  .box8Mobile {
+    display: block;
+  }
+
+  .box3Mobile,
+  .box6Mobile,
+  .box7Mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7% 2%;
+  }
+
+  .box6Mobile {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 50%;
+    height: 213.83px !important;
+  }
+
+  .missionPage .box p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .box {
+    width: 50%;
+    height: 208.8px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #prMiniCubic {
+    left: 65%;
+    top: 47%;
+    transform: scale(0.7);
+  }
+
+  #aboutBottomMobile {
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) scale(0.6);
+  }
+
+  .box {
+    width: 50%;
+    height: 201.25px !important;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .box {
+    width: 50%;
+    height: 196.22px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .box {
+    width: 50%;
+    height: 188.67px !important;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  #aboutBottomMobile {
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) scale(0.55);
+  }
+
+  .box {
+    width: 50%;
+    height: 178.61px !important;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .homePage p {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  .homePage p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 317px) {
+  #prCubic {
+    top: -60px;
+    left: 170px;
+    transform: scale(0.45);
+  }
+
+  .aboutPage h1 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #aboutBottomMobile {
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) scale(0.4);
+  }
+  #prCubic {
+    left: 140px;
+    transform: scale(0.4);
+  }
+}
+
+/* Mobile Menu */
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 40px;
+  cursor: pointer;
+  background-color: #fff;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 8px;
+  transition: 0.4s;
+  display: block;
+}
+
+.hamburger.hamburger.is-active {
+  width: 45px;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-9px, -7px);
+}
+
+.mobile-nav {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 98;
+  background: rgb(57, 24, 139);
+  background: linear-gradient(
+    0deg,
+    rgba(57, 24, 139, 1) 0%,
+    rgba(58, 22, 140, 1) 20%,
+    rgba(14, 122, 85, 1) 90%
+  );
+  margin-top: 70px;
+  transition: 0.4s;
+}
+
+.mobile-nav {
+  text-align: center;
+}
+.mobile-nav .socials {
+  margin: 30px 0;
+}
+.mobile-nav .socials i {
+  transform: scale(1.2);
+  margin-right: 30px;
+}
+#wp i {
+  margin: 0 !important;
+}
+.mobile-nav .contact {
+  margin: 30px 0;
+  font-size: 18px;
+}
+
+.mobile-nav .contacts {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile-nav .contacts i {
+  margin-right: 10px;
+}
+.mobile-nav .contacts a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.mobile-nav .contacts .left a {
+  display: flex;
+}
+.mobile-nav .contacts .right a {
+  display: flex;
+}
+.mobile-nav .contacts a {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  .mobile-nav .contacts {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .mobile-nav .contacts {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 445px) {
+  .mobile-nav .contacts {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mobile-nav .contacts a {
+    font-size: 16.5px;
+  }
+}
+@media screen and (max-width: 388px) {
+  .mobile-nav .contacts a {
+    font-size: 15.5px;
+  }
+
+  .mobile-nav .socials {
+    margin: 30px 0;
+  }
+  .mobile-nav .socials i {
+    transform: scale(1);
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .mobile-nav .contacts a {
+    font-size: 14px;
+  }
+  .mobile-nav .contacts i {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mobile-nav .contacts {
+    width: 80%;
+    flex-direction: column;
+    margin-left: 27% !important;
+  }
+  .mobile-nav .contacts a {
+    font-size: 14px;
+  }
+  .mobile-nav .contacts i {
+    margin-right: 5px;
+  }
+}
+
+.mobile-nav.is-active {
+  right: 0;
+}
+
+.hamburger.is-active #cubsForMobile1 {
+  display: none;
+}
+.hamburger.is-active #cubsForMobile2 {
+  display: none;
+}
+
+.programPage .adresses {
+  margin-top: 30px;
+}
+.programPage .adress {
+  display: flex;
+  margin-bottom: 15px;
+}
+.programPage .adress i {
+  margin-right: 10px;
+}
